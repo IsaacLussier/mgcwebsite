@@ -1,9 +1,53 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-black p-8">
-      <header className="mb-12 text-center">
+    <main className="min-h-screen bg-white text-black -mt-18">
+
+      {/*  Carousel at the Top */}
+      <Carousel className="w-full">
+        <CarouselContent>
+          <CarouselItem>
+            <Image
+              src="/other/mgc1.PNG"
+              alt="Slide 1"
+              width={1920}
+              height={800}
+              className="w-full h-[600px] md:h-[800px] object-cover"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              src="/other/mgc1.PNG"
+              alt="Slide 2"
+              width={1920}
+              height={600}
+              className="w-full h-[500px] md:h-[600px] object-cover"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              src="/carousel3.jpg"
+              alt="Slide 3"
+              width={1920}
+              height={600}
+              className="w-full h-[400px] md:h-[600px] object-cover"
+            />
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+
+      {/* Main Content */}
+      <header className="my-12 text-center">
         <h1 className="text-5xl font-bold">Multicultural Greek Council at WMU</h1>
         <p className="mt-2 text-lg text-gray-600">Unity Through Diversity</p>
       </header>
