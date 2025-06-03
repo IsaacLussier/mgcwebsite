@@ -12,7 +12,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-black -mt-24">
 
       {/*  Carousel at the Top */}
-      <Carousel className="w-full">
+      <Carousel className="w-full" opts={{ loop: true }}>
         <CarouselContent>
           <CarouselItem>
             <Image
