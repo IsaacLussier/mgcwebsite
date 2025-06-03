@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-black -mt-18">
+    <main className="min-h-screen bg-white text-black -mt-24">
 
       {/*  Carousel at the Top */}
       <Carousel className="w-full">
@@ -19,8 +19,8 @@ export default function Home() {
               src="/other/mgc1.PNG"
               alt="Slide 1"
               width={1920}
-              height={800}
-              className="w-full h-[600px] md:h-[800px] object-cover"
+              height={600}
+              className="w-full h-[500px] md:h-[900px] object-cover"
             />
           </CarouselItem>
           <CarouselItem>

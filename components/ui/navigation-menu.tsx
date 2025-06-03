@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 function NavigationMenu({
   className,
   children,
-  viewport = true,
+  viewport = false,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
   viewport?: boolean
@@ -106,7 +106,7 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        "absolute top-full left-0 isolate z-50 flex justify-center"
+        "absolute top-full flex justify-center perspective-1000"
       )}
     >
       <NavigationMenuPrimitive.Viewport

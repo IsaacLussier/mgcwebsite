@@ -28,64 +28,86 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`sticky top-0 z-70 px-12  transition-colors duration-300 ${
+    <nav
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
         scrolled ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center border border-red-500">
-        <div className="relative h-16 w-46">
-          <Link href="/" className="block absolute -bottom-24 right-0">
-            <img
-              src="/other/mgcicon.png"
-              alt="MGC Logo"
-              className="h-38 w-auto drop-shadow-md"
-            />
-          </Link>
-        </div>
-        
-        
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/">Home</NavigationMenuLink>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>About</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="p-4 w-[200px] space-y-2">
-                  <li><NavigationMenuLink href="/about">Mission</NavigationMenuLink></li>
-                  <li><NavigationMenuLink href="/eboard">Executive Board</NavigationMenuLink></li>
-                  <li><NavigationMenuLink href="/orgs">Organizations</NavigationMenuLink></li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Service</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="p-4 w-[200px] space-y-2">
-                  <li><NavigationMenuLink href="/about">Mission</NavigationMenuLink></li>
-                  <li><NavigationMenuLink href="/community">Community</NavigationMenuLink></li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Events</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="p-4 w-[200px] space-y-2">
-                  <li><NavigationMenuLink href="/fall">Fall Events</NavigationMenuLink></li>
-                  <li><NavigationMenuLink href="/spring">Spring Events</NavigationMenuLink></li>
-                  <li><NavigationMenuLink href="/calendar">Calendar</NavigationMenuLink></li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            
-          </NavigationMenuList>
-        </NavigationMenu>
+      {/* LOGO absolutely positioned in top-left */}
+      <div className="absolute top-2 left-4 z-50">
+        <Link href="/">
+          <img
+            src="/other/mgcicon.png"
+            alt="MGC Logo"
+            className="h-36 w-auto drop-shadow-md"
+          />
+        </Link>
       </div>
+
+      {/* Navigation Links (Centered Container) */}
+      <div className="relative max-w-8xl mx-auto flex justify-end items-center h-24 px-20">
+          <NavigationMenu className="relative w-full flex justify-end">
+            <NavigationMenuList>
+              <NavigationMenuItem className="space-x-8">
+                <NavigationMenuLink href="/" className="block px-8 py-2 text-sm text-[#0] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Home</NavigationMenuLink>
+              </NavigationMenuItem>
+
+              {/* About Menu Item */}
+              <NavigationMenuItem className="relative">
+                <NavigationMenuTrigger className="px-8 py-4 text-lg font-semibold text-[#D4AF37] border border-[#D4AF37] bg-white rounded-sm hover:bg-[#D4AF37] hover:text-white transition-colors duration-200 transition-transform hover:scale-103 shadow-md" >About</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white shadow-lg border border-[#D4AF37] rounded">
+                  <ul className="p-4 w-[200px] space-y-2">
+                    <li><NavigationMenuLink href="/about" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Mission</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/eboard" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Executive Board</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/orgs" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Organizations</NavigationMenuLink></li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Organizations Menu Item */}
+              <NavigationMenuItem className="relative">
+                <NavigationMenuTrigger className="px-8 py-4 text-lg font-semibold text-[#D4AF37] border border-[#D4AF37] bg-white rounded-sm hover:bg-[#D4AF37] hover:text-white transition-colors duration-200 transition-transform hover:scale-103 shadow-md">Organizations</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white shadow-lg border border-[#D4AF37] rounded">
+                  <ul className="p-4 w-[200px] space-y-2">
+                    <li><NavigationMenuLink href="/slb" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΣLB</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/slg" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΣLG</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/lta" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΛΘΑ</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/odp" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΩΔΦ</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/dtl" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΔΤΛ</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/pia" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΦΙΑ</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/syz" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΣΨΖ</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/zsx" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΖΣΧ</NavigationMenuLink></li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Service Menu Item */}
+              <NavigationMenuItem className="relative">
+                <NavigationMenuTrigger className="px-8 py-4 text-lg font-semibold text-[#D4AF37] border border-[#D4AF37] bg-white rounded-sm hover:bg-[#D4AF37] hover:text-white transition-colors duration-200 transition-transform hover:scale-103 shadow-md">Service</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white shadow-lg border border-[#D4AF37] rounded">
+                  <ul className="p-4 w-[200px] space-y-2">
+                    <li><NavigationMenuLink href="/about" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Community Involvement</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/community" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Service Events</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/community" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Contact Us</NavigationMenuLink></li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Events Menu Item */}
+              <NavigationMenuItem className="relative">
+                <NavigationMenuTrigger className="px-8 py-4 text-lg font-semibold text-[#D4AF37] border border-[#D4AF37] bg-white rounded-sm hover:bg-[#D4AF37] hover:text-white transition-colors duration-200 transition-transform hover:scale-103 shadow-md">Events</NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white shadow-lg border border-[#D4AF37] rounded">
+                  <ul className="p-4 w-[200px] space-y-2">
+                    <li><NavigationMenuLink href="/fall" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Fall Events</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/spring" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Spring Events</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/calendar" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Calendar</NavigationMenuLink></li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+            </NavigationMenuList>
+          </NavigationMenu>
+      </div>  
     </nav>
   );
 }
