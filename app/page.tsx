@@ -47,12 +47,12 @@ export default function Home() {
       </Carousel>
 
       {/* Main Content */}
-      <header className="my-12 text-center">
+      <header className="my-12 text-center px-4">
         <h1 className="text-5xl font-bold">Multicultural Greek Council at WMU</h1>
         <p className="mt-2 text-lg text-gray-600">Unity Through Diversity</p>
       </header>
 
-      <section className="text-center">
+      <section className="text-center px-4">
         <p className="text-xl mb-4">Discover our events, organizations, and impact on campus.</p>
         <a href="/community" className="inline-block bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">
           Learn More

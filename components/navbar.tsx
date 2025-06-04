@@ -54,19 +54,24 @@ export default function Navbar() {
 
               {/* About Menu Item */}
               <NavigationMenuItem className="relative">
+                <Link href="/about">
                 <NavigationMenuTrigger className="px-8 py-4 text-lg font-semibold text-[#D4AF37] border border-[#D4AF37] bg-white rounded-sm hover:bg-[#D4AF37] hover:text-white transition-colors duration-200 transition-transform hover:scale-103 shadow-md" >About</NavigationMenuTrigger>
+                </Link>
                 <NavigationMenuContent className="bg-white shadow-lg border border-[#D4AF37] rounded">
                   <ul className="p-4 w-[200px] space-y-2">
-                    <li><NavigationMenuLink href="/about" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Mission</NavigationMenuLink></li>
-                    <li><NavigationMenuLink href="/eboard" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Executive Board</NavigationMenuLink></li>
-                    <li><NavigationMenuLink href="/orgs" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Organizations</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/about#mission" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Mission</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/about#history" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">History</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/about#eboard" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Executive Board</NavigationMenuLink></li>
+                    <li><NavigationMenuLink href="/about#socials" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Socials</NavigationMenuLink></li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
               {/* Organizations Menu Item */}
               <NavigationMenuItem className="relative">
+                <Link href="/orgs">
                 <NavigationMenuTrigger className="px-8 py-4 text-lg font-semibold text-[#D4AF37] border border-[#D4AF37] bg-white rounded-sm hover:bg-[#D4AF37] hover:text-white transition-colors duration-200 transition-transform hover:scale-103 shadow-md">Organizations</NavigationMenuTrigger>
+                </Link>
                 <NavigationMenuContent className="bg-white shadow-lg border border-[#D4AF37] rounded">
                   <ul className="p-4 w-[200px] space-y-2">
                     <li><NavigationMenuLink href="/slb" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">ΣLB</NavigationMenuLink></li>
@@ -83,7 +88,9 @@ export default function Navbar() {
 
               {/* Service Menu Item */}
               <NavigationMenuItem className="relative">
+                <Link href="/service">
                 <NavigationMenuTrigger className="px-8 py-4 text-lg font-semibold text-[#D4AF37] border border-[#D4AF37] bg-white rounded-sm hover:bg-[#D4AF37] hover:text-white transition-colors duration-200 transition-transform hover:scale-103 shadow-md">Service</NavigationMenuTrigger>
+                </Link>
                 <NavigationMenuContent className="bg-white shadow-lg border border-[#D4AF37] rounded">
                   <ul className="p-4 w-[200px] space-y-2">
                     <li><NavigationMenuLink href="/about" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Community Involvement</NavigationMenuLink></li>
@@ -95,7 +102,9 @@ export default function Navbar() {
 
               {/* Events Menu Item */}
               <NavigationMenuItem className="relative">
+                <Link href="/events">
                 <NavigationMenuTrigger className="px-8 py-4 text-lg font-semibold text-[#D4AF37] border border-[#D4AF37] bg-white rounded-sm hover:bg-[#D4AF37] hover:text-white transition-colors duration-200 transition-transform hover:scale-103 shadow-md">Events</NavigationMenuTrigger>
+                </Link>
                 <NavigationMenuContent className="bg-white shadow-lg border border-[#D4AF37] rounded">
                   <ul className="p-4 w-[200px] space-y-2">
                     <li><NavigationMenuLink href="/fall" className="block px-4 py-2 text-sm text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white rounded transition-colors duration-150">Fall Events</NavigationMenuLink></li>
